@@ -1,18 +1,22 @@
-import { Canvas } from "@react-three/fiber";
-import { Experience } from "./components/Experience";
-import React from "react";
+import { Canvas } from '@react-three/fiber';
+import { Experience } from './components/Experience';
+import React from 'react';
+import { createXRStore, XR } from '@react-three/xr';
+import NavBar from './html/NavBar.jsx';
+
+const store = createXRStore();
 
 function App() {
   return (
-      <>
-  <h1 className="text-3xl font-bold underline">
-      Hello world!
-  </h1>
-    <Canvas shadows camera={{position: [3, 3, 3], fov: 30}}>
-        <color attach="background" args={["#ececec"]} />
-      <Experience />
-    </Canvas>
-      </>
+    <>
+      <NavBar />
+      <Canvas shadows camera={{ position: [3, 3, 3], fov: 30 }}>
+        <XR store={store}>
+          <color attach="background" args={['#ececec']} />
+          <Experience />
+        </XR>
+      </Canvas>
+    </>
   );
 }
 
