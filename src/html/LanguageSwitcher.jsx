@@ -1,4 +1,3 @@
-
 import { useTranslation } from 'react-i18next';
 
 export default function LanguageSwitcher() {
@@ -14,8 +13,7 @@ export default function LanguageSwitcher() {
         id="language-select"
         onChange={handleChangeLanguage}
         defaultValue={i18n.language}
-        className="text-black bg-inherit uppercase"
-      >
+        className="text-white bg-inherit uppercase">
         <option value="en">English</option>
         <option value="de">Deutsch</option>
       </select>

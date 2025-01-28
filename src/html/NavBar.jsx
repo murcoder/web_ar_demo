@@ -11,17 +11,17 @@ export default function NavBar({ closeDetailClick, showDetailBar = false, detail
   };
 
   return (
-    <nav className="bg-white/70 backdrop-blur-md shadow-md fixed w-full top-0 left-0 z-10">
-      <div className="container mx-auto flex items-center justify-between p-4">
+    <nav className="bg-gray-800 backdrop-blur-md shadow-md fixed w-full top-0 left-0 z-10">
+      <div className="container mx-auto flex items-center justify-between p-4 text-white">
         {/* Logo */}
         <div className="flex items-center">
           <img src="./icons/logo.svg" alt="Logo" className="h-8 w-8 fill-black" />
-          <span className="text-2xl font-extrabold text-black font-logo ml-2">{t('title')}</span>
+          <span className="text-2xl font-extrabold text-white font-logo ml-2 ">{t('title')}</span>
         </div>
 
         {/* Menu Icon (Mobile) */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
+          <button onClick={toggleMenu} className="text-white focus:outline-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -44,16 +44,13 @@ export default function NavBar({ closeDetailClick, showDetailBar = false, detail
           <li>
             <a
               href="https://wiki.grandgarage.eu"
-              className="text-gray-800 hover:underline"
+              className="text-white hover:underline"
               target="_blank">
               Wiki
             </a>
           </li>
           <li>
-            <a
-              href="https://grandgarage.eu"
-              className="text-gray-800 hover:underline"
-              target="_blank">
+            <a href="https://grandgarage.eu" className="text-white hover:underline" target="_blank">
               Makerspace
             </a>
           </li>
